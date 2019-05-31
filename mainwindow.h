@@ -30,12 +30,20 @@ private slots:
     void on_generateBtn_clicked();
     void on_fontSizeSpinner_valueChanged(int arg1);
 
+    void on_boldFont_stateChanged(int arg1);
+
+    void on_italicFont_stateChanged(int arg1);
+
+    void on_underLine_stateChanged(int arg1);
+
+    void on_calcOffset_clicked();
+
 private:
     Ui::MainWindow *ui;
     Font prepareFont(const QString &asciiChar);
     QString extraZeros(QString binValue);
     QString convertToHex(QString binValue);
-    uint32_t calculateOffset(int height, int width);
+    uint32_t calculateOffset(int height, int width, char asciiChar);
 };
 
 #endif // MAINWINDOW_H
